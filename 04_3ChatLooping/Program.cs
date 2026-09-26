@@ -25,33 +25,30 @@ namespace _04_3ChatLooping
                  });
             //创建智能体
             AIAgent agent = client.GetChatClient("gpt-4.1-mini").AsAIAgent();
-
-
-
-
-            Output.Separator();
-            Output.Title("Streaming Call");
-
-            await foreach (AgentResponseUpdate update in agent.RunStreamingAsync("如何做牛肉汤?"))
+            AgentSession session = await agent.CreateSessionAsync();
+            while (true)
             {
-                Console.Write(update);
+                Console.Write("> ");
+                string input = Console.ReadLine() ?? "";
+                List<AgentResponseUpdate> updates = [];
+                await foreach (AgentResponseUpdate update in agent.RunStreamingAsync(input, session))
+                {
+                    updates.Add(update);
+                    Console.Write(update);
+                }
+                AgentResponse response = updates.ToAgentResponse();
+                if (response.Usage != null)
+                {
+                    Console.WriteLine();
+                    Output.Gray($"Tokens - In: {response.Usage.InputTokenCount} - Out: {response.Usage.OutputTokenCount}");
+                }
+
+                InMemoryChatHistoryProvider? historyProvider = agent.GetService<InMemoryChatHistoryProvider>();
+                IList<ChatMessage> messagesForSession = historyProvider?.GetMessages(session) ?? [];
+
+                Output.Separator();
+
             }
-
-            Output.Separator();
-
-            Output.Title("Streaming Call (gathering all updates to a response at the end)");
-            List<AgentResponseUpdate> updates = [];
-            await foreach (AgentResponseUpdate update in agent.RunStreamingAsync("如何做牛肉汤?"))
-            {
-                updates.Add(update);
-                Console.Write(update);
-            }
-
-            AgentResponse collectedResponse = updates.ToAgentResponse();
-            //Use to the usage, and other return data...
-            Console.WriteLine(collectedResponse.Usage!.OutputTokenCount);
-
-
         }
     }
 }
