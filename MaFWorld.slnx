@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="04_3ChatLooping/04_3ChatLooping.csproj" Id="881a43b7-b2a9-4132-8291-a7b571c76d69" />
+  <Project Path="05_1CreateTools/05_1CreateTools.csproj" Id="c933f0c5-345b-44ce-a4ea-6857ef75ca2d" />
   <Project Path="MaFUtilities/MaFUtilities.csproj" Id="5f7f54d3-fcb9-4141-890b-7aa210b28ec6" />
   <Project Path="MaFWorld/02_6MaFWorld.csproj" />
 </Solution>

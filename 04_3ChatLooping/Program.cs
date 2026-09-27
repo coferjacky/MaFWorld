@@ -33,12 +33,12 @@ namespace _04_3ChatLooping
                 Console.Write("> ");
                 string input = Console.ReadLine() ?? "";
                 List<AgentResponseUpdate> updates = [];
-                await foreach (AgentResponseUpdate update in agent.RunStreamingAsync(input, session))
+                await foreach (AgentResponseUpdate update in agent.RunStreamingAsync( input, session))
                 {
                     updates.Add(update);
                     Console.Write(update);
                 }
-                AgentResponse response = updates.ToAgentResponse();
+                AgentResponse response = updates.ToAgentResponse();                                                                                                     
                 if (response.Usage != null)
                 {
                     Console.WriteLine();
