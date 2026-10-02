@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>_07_1TheLifeOfAnLlmCall</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>5a054083-3076-465a-8195-cd5724fd5717</UserSecretsId>
+  </PropertyGroup>
+
+
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.22.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
+	</ItemGroup>
+
+
+
+	<ItemGroup>
+		<ProjectReference Include="..\MaFUtilities\MaFUtilities.csproj" />
+	</ItemGroup>
+</Project>

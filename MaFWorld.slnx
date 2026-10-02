@@ -5,6 +5,10 @@
   <Project Path="05_2McpService/05_2McpService.csproj" Id="fc0dc364-9261-4622-bd5d-b20ab4bb1948" />
   <Project Path="05_4OtherAgnetAsTools/05_4OtherAgnetAsTools.csproj" Id="b7388dc5-3ead-4a7a-9fef-e79286711036" />
   <Project Path="05_5WebSearch/05_5WebSearch.csproj" Id="7b9333c9-e937-4f62-9d1f-ea785590516f" />
+  <Project Path="05_6CodeInterpreter/05_6CodeInterpreter.csproj" Id="aa63d05c-a7b6-4ee5-a644-217545956e56" />
+  <Project Path="06_1StructuredOutput/06_1StructuredOutput.csproj" Id="9665ebcd-7759-42af-b060-ba9f8b0d6467" />
+  <Project Path="06_2StructuredOutputInstructions/06_2StructuredOutputInstructions.csproj" Id="4db01e97-f029-4358-9090-f12f84cb0c24" />
+  <Project Path="07_1TheLifeOfAnLlmCall/07_1TheLifeOfAnLlmCall.csproj" Id="9fd381f7-d1c6-4530-8245-f300f13127ce" />
   <Project Path="MaFUtilities/MaFUtilities.csproj" Id="5f7f54d3-fcb9-4141-890b-7aa210b28ec6" />
   <Project Path="MaFWorld/02_6MaFWorld.csproj" />
 </Solution>
