@@ -9,6 +9,10 @@
   <Project Path="06_1StructuredOutput/06_1StructuredOutput.csproj" Id="9665ebcd-7759-42af-b060-ba9f8b0d6467" />
   <Project Path="06_2StructuredOutputInstructions/06_2StructuredOutputInstructions.csproj" Id="4db01e97-f029-4358-9090-f12f84cb0c24" />
   <Project Path="07_1TheLifeOfAnLlmCall/07_1TheLifeOfAnLlmCall.csproj" Id="9fd381f7-d1c6-4530-8245-f300f13127ce" />
+  <Project Path="08_3EmbeddingData/08_3EmbeddingData.csproj" Id="a3bb4fe4-5fa6-4a51-946d-c94c1f3accf2" />
+  <Project Path="08_4IngestDataIntoVectorStore/08_4IngestDataIntoVectorStore.csproj" Id="edd4455e-2f6c-4dbd-89da-4844558759dc" />
+  <Project Path="08_5SearchAndUseVectorStore/08_5SearchAndUseVectorStore.csproj" Id="64812a93-01cd-4ce6-9e41-c8f9b0130724" />
+  <Project Path="08_6SearchAsTool/08_6SearchAsTool.csproj" Id="78a4543c-8ff3-4047-8249-0660f33f4e64" />
   <Project Path="MaFUtilities/MaFUtilities.csproj" Id="5f7f54d3-fcb9-4141-890b-7aa210b28ec6" />
   <Project Path="MaFWorld/02_6MaFWorld.csproj" />
 </Solution>
