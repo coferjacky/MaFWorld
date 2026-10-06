@@ -13,6 +13,8 @@
   <Project Path="08_4IngestDataIntoVectorStore/08_4IngestDataIntoVectorStore.csproj" Id="edd4455e-2f6c-4dbd-89da-4844558759dc" />
   <Project Path="08_5SearchAndUseVectorStore/08_5SearchAndUseVectorStore.csproj" Id="64812a93-01cd-4ce6-9e41-c8f9b0130724" />
   <Project Path="08_6SearchAsTool/08_6SearchAsTool.csproj" Id="78a4543c-8ff3-4047-8249-0660f33f4e64" />
+  <Project Path="10_2ResonEffort/10_2ResonEffort.csproj" Id="4ecaa58f-4dd5-4306-b975-56314895b70e" />
   <Project Path="MaFUtilities/MaFUtilities.csproj" Id="5f7f54d3-fcb9-4141-890b-7aa210b28ec6" />
   <Project Path="MaFWorld/02_6MaFWorld.csproj" />
+  <Project Path="Shared/Shared.csproj" Id="117a751e-ef29-4594-9417-7c5a5164d831" />
 </Solution>
