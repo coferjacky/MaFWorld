@@ -1,4 +1,4 @@
-﻿namespace Shared;
+﻿namespace MaFUtilities;
 
 public record Secrets(
     string OpenAiApiKey,

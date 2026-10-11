@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.AI;
 
-namespace Shared.Extensions;
+namespace MaFUtilities.Extensions;
 
 public static class UsageDetailsExtensions
 {

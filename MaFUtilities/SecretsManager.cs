@@ -4,7 +4,7 @@ using System.ClientModel;
 using System.ClientModel.Primitives;
 using System.Text.Json;
 
-namespace Shared;
+namespace MaFUtilities;
 
 public class SecretsManager
 {
@@ -42,7 +42,7 @@ public class SecretsManager
         IConfigurationRoot configurationRoot = new ConfigurationBuilder().AddUserSecrets<SecretsManager>().Build();
 
         return new Secrets(
-            configurationRoot["OpenAiApiKey"] ?? string.Empty,
+            configurationRoot["OpenAiApiKey"] ?? string.Empty,//用这个
             configurationRoot["AzureOpenAiEndpoint"] ?? string.Empty,
             configurationRoot["AzureOpenAiKey"] ?? string.Empty,
             configurationRoot["MicrosoftFoundryEndpoint"] ?? string.Empty,
@@ -51,7 +51,7 @@ public class SecretsManager
             configurationRoot["GitHubPatToken"] ?? string.Empty,
             configurationRoot["HuggingFaceApiKey"] ?? string.Empty,
             configurationRoot["TypeSafeApiKey"] ?? string.Empty,
-            configurationRoot["OpenRouterApiKey"] ?? string.Empty,
+            configurationRoot["OpenRouterApiKey"] ?? string.Empty, 
             configurationRoot["ApplicationInsightsConnectionString"] ?? string.Empty,
             configurationRoot["GoogleGeminiApiKey"] ?? string.Empty,
             configurationRoot["XAiGrokApiKey"] ?? string.Empty,
@@ -68,7 +68,7 @@ public class SecretsManager
     {
         //New format (https://<name>.openai.azure.com/openai/v1)
         //Old format (https://<name>.openai.azure.com/)
-        string suffix = "openai/v1";
+        string suffix = "v1";
         Secrets secrets = GetSecrets();
         string secretEndpoint = secrets.AzureOpenAiEndpoint;
         if (!newUriFormat)
@@ -98,5 +98,21 @@ public class SecretsManager
     {
         Secrets secrets = GetSecrets();
         return secrets.OpenAiApiKey;
+    }
+    //一个方法来获取自定义的OpenAI凭据，返回一个元组，包含端点和API密钥
+    public static (Uri endpoint, ApiKeyCredential apiKey) GetCustomOpenAICredentials()
+    {
+        IConfigurationRoot config = new ConfigurationBuilder().AddUserSecrets<SecretsManager>().Build();
+
+        string endpointStr = config["OpenAiEndpoint"] ?? "https://www.zhian-ai.com/v1";
+        string apiKey = config["OpenAiApiKey"] ?? string.Empty;
+
+        // 确保以 / 结尾或保留 /v1
+        if (!endpointStr.EndsWith('/'))
+        {
+            endpointStr += "/";
+        }
+
+        return (new Uri(endpointStr), new ApiKeyCredential(apiKey));
     }
 }

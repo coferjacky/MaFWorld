@@ -4,10 +4,16 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <UserSecretsId>f4e02d9a-41e6-4bd8-87bf-0d37a9a81c3c</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AgentFrameworkToolkit.Anthropic" Version="1.24.2" />
+    <PackageReference Include="JetBrains.Annotations" Version="2026.2.0" />
     <PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.22.0" />
+	<PackageReference Include="CommunityToolkit.VectorData.SqliteVec" Version="1.0.2-preview" />
+	<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
+
   </ItemGroup>
 
 </Project>

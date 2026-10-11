@@ -3,13 +3,13 @@
 using JetBrains.Annotations;
 using Microsoft.Agents.AI;
 using Microsoft.Extensions.AI;
-using Shared.Extensions;
+using MaFUtilities.Extensions;
 using System.ClientModel;
 using System.ClientModel.Primitives;
 using System.Text;
 using System.Text.Json;
 
-namespace Shared;
+namespace MaFUtilities;
 
 [PublicAPI]
 public static class Utils
@@ -60,13 +60,13 @@ public static class Utils
 
     public static void LineSeparator()
     {
-        WriteLine("".PadLeft(Console.WindowWidth, '-'), ConsoleColor.Gray);
+        WriteLine("".PadLeft(Console.IsOutputRedirected ? 80 : Console.WindowWidth, '-'), ConsoleColor.Gray);
     }
 
     public static void Separator()
     {
         Console.WriteLine();
-        WriteLine("".PadLeft(Console.WindowWidth, '-'), ConsoleColor.Gray);
+        LineSeparator();
         Console.WriteLine();
     }
 

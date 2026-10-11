@@ -4,7 +4,7 @@ using System.ClientModel.Primitives;
 using System.Text.Json;
 using OpenAI;
 
-namespace Shared;
+namespace MaFUtilities;
 
 public static class ClientHelper
 {
@@ -18,6 +18,25 @@ public static class ClientHelper
 
         return new OpenAIClient(new ApiKeyCredential(apiKey), new OpenAIClientOptions
         {
+            Transport = new HttpClientPipelineTransport(new HttpClient(new CustomClientHttpHandler(rawCall ?? new RawCallOptions())))
+        });
+    }
+
+    // 第三方 AI 中转站（OpenAI 兼容接口），端点和密钥来自 User Secrets 中的 OpenAiEndpoint / OpenAiApiKey
+    public static OpenAIClient GetCustomOpenAIClient(bool showRawCall = false, RawCallOptions? rawCall = null)
+    {
+        (Uri endpoint, ApiKeyCredential apiKey) = SecretsManager.GetCustomOpenAICredentials();
+        if (!showRawCall)
+        {
+            return new OpenAIClient(apiKey, new OpenAIClientOptions
+            {
+                Endpoint = endpoint
+            });
+        }
+
+        return new OpenAIClient(apiKey, new OpenAIClientOptions
+        {
+            Endpoint = endpoint,
             Transport = new HttpClientPipelineTransport(new HttpClient(new CustomClientHttpHandler(rawCall ?? new RawCallOptions())))
         });
     }
