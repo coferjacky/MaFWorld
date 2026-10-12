@@ -5,7 +5,7 @@ using System.ClientModel.Primitives;
 using System.Text.Json;
 
 namespace MaFUtilities;
-
+//读取密钥
 public class SecretsManager
 {
     /* This SecretsManager relies on .NET User Secrets in the following format
@@ -39,6 +39,7 @@ public class SecretsManager
 
     public static Secrets GetSecrets()
     {
+        
         IConfigurationRoot configurationRoot = new ConfigurationBuilder().AddUserSecrets<SecretsManager>().Build();
 
         return new Secrets(
