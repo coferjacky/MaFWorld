@@ -17,7 +17,7 @@ using ChatMessage = Microsoft.Extensions.AI.ChatMessage;
 Secrets secrets = SecretsManager.GetSecrets();
 Uri endpoint = SecretsManager.GetCustomOpenAICredentials().endpoint;
 string apiKey = secrets.OpenAiApiKey;
-string question = "What is the Capital of France and how many people live there? (Answer back in max 3 words)";
+string question = "法国首都在哪里，住了多少人? (最多10个文字返回)";
 
 
 /* OpenAI Models that can use reasoning:
@@ -54,6 +54,8 @@ await AgentFrameworkToolkitResponseApi();
 
 return;
 
+
+//默认推理等级
 async Task Baseline()
 {
 
@@ -67,7 +69,7 @@ async Task Baseline()
     response.Usage.OutputAsInformation();
     Console.WriteLine(response);
 }
-
+// 强制"几乎不思考"，用底层 ChatCompletionOptions 设置
 async Task RawChatClient()
 {
     OpenAIClient client = ClientHelper.GetCustomOpenAIClient();
@@ -90,7 +92,7 @@ async Task RawChatClient()
     Console.WriteLine(response);
     response.Usage.OutputAsInformation();
 }
-
+//Raw ResponsesAPI + High — 强制"深度思考"，并要求返回思考过程摘要（这是 Responses API 独有的能力，ChatClient 没有）
 async Task RawResponsesApi()
 {
     OpenAIClient client = ClientHelper.GetCustomOpenAIClient();
@@ -129,7 +131,7 @@ async Task RawResponsesApi()
     Console.WriteLine(response);
     response.Usage.OutputAsInformation();
 }
-
+//Toolkit ChatClient + Minimal — 用 AgentFrameworkToolkit 高层封装，验证它也能控制
 async Task AgentFrameworkToolkitChatClient()
 {
     OpenAIAgentFactory agentFactory = new(new OpenAIConnection
@@ -148,7 +150,7 @@ async Task AgentFrameworkToolkitChatClient()
     Console.WriteLine(response);
     response.Usage.OutputAsInformation();
 }
-
+//Toolkit ResponsesAPI + High — Toolkit + Responses API + 推理摘要
 async Task AgentFrameworkToolkitResponseApi()
 {
     OpenAIAgentFactory agentFactory = new(new OpenAIConnection

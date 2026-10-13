@@ -43,7 +43,7 @@ public static class ClientHelper
         return new OpenAIClient(apiKey, new OpenAIClientOptions
         {
             Endpoint = endpoint,
-            //
+            //如果开启了 showRawCall，就把自定义的 CustomClientHttpHandler 放到 SDK 的 HttpClient 里，这样就能在请求发出时打印原始 JSON。
             Transport = new HttpClientPipelineTransport(new HttpClient(new CustomClientHttpHandler(rawCall ?? new RawCallOptions())))
         });
     }
@@ -74,12 +74,12 @@ public static class ClientHelper
     }
 
 
-   // 通过继承.NET 标准的 HttpClientHandler 并覆写 SendAsync 方法，实现对 HTTP 流量的拦截与输出：
+   // 通过继承.NET 标准的 HttpClientHandler 并覆写 SendAsync 方法，实现对 HTTP 流量的拦截与输出：熟称 抓包器
     class CustomClientHttpHandler(RawCallOptions rawCallOptions) : HttpClientHandler
     {
-        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)  //CancellationToken cancellationToken 取消令牌
         {
-            // 读取请求体,如果请求体是空，则不读取
+            // 读取请求体,如果请求体是空，则返回null，如果不为null，则调用 ReadAsStringAsync 方法读取请求体的内容，并将其转换为字符串。这里使用了 null 条件运算符 ?. 来处理可能为 null 的情况。
             string requestString = await request.Content?.ReadAsStringAsync(cancellationToken)!;
             //如果开启了"显示 URL"，用绿色打印请求地址（含协议、域名、路径）。
             if (rawCallOptions.ShowUrl)
