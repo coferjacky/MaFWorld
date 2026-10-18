@@ -10,12 +10,13 @@ using ChatMessage = Microsoft.Extensions.AI.ChatMessage;
 
 Secrets secrets = SecretsManager.GetSecrets();
 
-OpenAIClient client = ClientHelper.GetCustomOpenAIClient();
-OpenAIClient openAiClient = new(new ApiKeyCredential(secrets.OpenAiApiKey));
+//注：原示例 new OpenAIClient(apiKey) 直连官方 api.openai.com，需要官方 key。
+//当前使用中转站 key，因此统一走 GetCustomOpenAIClient()（连 zhian-ai.com）
+OpenAIClient openAiClient = ClientHelper.GetCustomOpenAIClient();
 
 ChatClientAgent openAiAgent = openAiClient.GetChatClient("gpt-4.1").AsAIAgent();
 
-Scenario scenario = Scenario.All3;
+Scenario scenario = Scenario.Pdf;
 
 AgentResponse response;
 switch (scenario)
@@ -33,7 +34,7 @@ switch (scenario)
     //Image via URI
         response = await openAiAgent.RunAsync(new ChatMessage(ChatRole.User,
         [
-            new TextContent("What is in this image?"),
+            new TextContent("这是什么图片?"),
                     new UriContent("https://cdn.pixabay.com/photo/2019/09/21/14/57/catan-4494043_1280.jpg", "image/jpeg")
         ]));
         ShowResponse(response);
@@ -75,7 +76,7 @@ switch (scenario)
         string dataUri = $"data:application/pdf;base64,{base64Pdf}";
         response = await openAiAgent.RunAsync(new ChatMessage(ChatRole.User,
         [
-            new TextContent("What is the winning condition in attached PDF"),
+            new TextContent("附件PDF的胜利条件是什么"),
                     new DataContent(dataUri, "application/pdf")
         ]));
         ShowResponse(response);
