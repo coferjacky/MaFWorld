@@ -15,6 +15,7 @@
   <Project Path="08_6SearchAsTool/08_6SearchAsTool.csproj" Id="78a4543c-8ff3-4047-8249-0660f33f4e64" />
   <Project Path="10_2ReasoningEffort/10_2ReasoningEffort.csproj" Id="b212aa5b-43e3-42c0-a123-fb97bf26aacf" />
   <Project Path="10_3AgentInputData/10_3AgentInputData.csproj" Id="ff79f6fa-5444-4410-a984-9946f3d5139c" />
+  <Project Path="10_4AIContextProviderFactory/10_4AIContextProviderFactory.csproj" Id="c1ad3e33-dc13-4e44-990a-72d18f36825e" />
   <Project Path="MaFUtilities/MaFUtilities.csproj" Id="5f7f54d3-fcb9-4141-890b-7aa210b28ec6" />
   <Project Path="MaFWorld/02_6MaFWorld.csproj" />
 </Solution>
