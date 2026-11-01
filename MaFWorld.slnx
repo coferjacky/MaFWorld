@@ -17,6 +17,8 @@
   <Project Path="10_3AgentInputData/10_3AgentInputData.csproj" Id="ff79f6fa-5444-4410-a984-9946f3d5139c" />
   <Project Path="10_4AIContextProviderFactory/10_4AIContextProviderFactory.csproj" Id="c1ad3e33-dc13-4e44-990a-72d18f36825e" />
   <Project Path="10_5ChatMessageStoreFactory/10_5ChatMessageStoreFactory.csproj" Id="2f607cd1-50bc-4592-aca1-e301d80229b2" />
+  <Project Path="10_6OpenTelemetry/10_6OpenTelemetry.csproj" Id="bc414b16-fc87-4328-aa3c-bd35642b2a27" />
+  <Project Path="10_7AIAsDataFilter/10_7AIAsDataFilter.csproj" Id="63ae93ef-6fc3-4168-8148-3346de322668" />
   <Project Path="MaFUtilities/MaFUtilities.csproj" Id="5f7f54d3-fcb9-4141-890b-7aa210b28ec6" />
   <Project Path="MaFWorld/02_6MaFWorld.csproj" />
 </Solution>
