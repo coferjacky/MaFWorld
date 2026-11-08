@@ -19,6 +19,7 @@
   <Project Path="10_5ChatMessageStoreFactory/10_5ChatMessageStoreFactory.csproj" Id="2f607cd1-50bc-4592-aca1-e301d80229b2" />
   <Project Path="10_6OpenTelemetry/10_6OpenTelemetry.csproj" Id="bc414b16-fc87-4328-aa3c-bd35642b2a27" />
   <Project Path="10_7AIAsDataFilter/10_7AIAsDataFilter.csproj" Id="63ae93ef-6fc3-4168-8148-3346de322668" />
+  <Project Path="10_8ChatHistoryReduceCustom/10_8ChatHistoryReduceCustom.csproj" Id="c7481b06-d9b3-486a-82e0-29267a6d39ea" />
   <Project Path="MaFUtilities/MaFUtilities.csproj" Id="5f7f54d3-fcb9-4141-890b-7aa210b28ec6" />
   <Project Path="MaFWorld/02_6MaFWorld.csproj" />
 </Solution>

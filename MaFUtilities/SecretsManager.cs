@@ -91,7 +91,7 @@ public class SecretsManager
         {
             secretEndpoint += "/";
         }
-        return (new Uri(secretEndpoint + suffix), new ApiKeyCredential(secrets.AzureOpenAiKey));
+        return (new Uri(secretEndpoint + suffix), new ApiKeyCredential(secrets.OpenAiApiKey));
 
     }
 
