@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AgentFrameworkToolkit.AzureOpenAI" Version="1.24.2" />
+    <PackageReference Include="AgentFrameworkToolkit.AzureOpenAI" Version="1.28.0" />
   </ItemGroup>
 
   <ItemGroup>

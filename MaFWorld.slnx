@@ -13,6 +13,7 @@
   <Project Path="08_4IngestDataIntoVectorStore/08_4IngestDataIntoVectorStore.csproj" Id="edd4455e-2f6c-4dbd-89da-4844558759dc" />
   <Project Path="08_5SearchAndUseVectorStore/08_5SearchAndUseVectorStore.csproj" Id="64812a93-01cd-4ce6-9e41-c8f9b0130724" />
   <Project Path="08_6SearchAsTool/08_6SearchAsTool.csproj" Id="78a4543c-8ff3-4047-8249-0660f33f4e64" />
+  <Project Path="10_10Hyperlight/10_10Hyperlight.csproj" Id="37a8c002-b3f1-4ac4-b87b-8aa0626283ac" />
   <Project Path="10_2ReasoningEffort/10_2ReasoningEffort.csproj" Id="b212aa5b-43e3-42c0-a123-fb97bf26aacf" />
   <Project Path="10_3AgentInputData/10_3AgentInputData.csproj" Id="ff79f6fa-5444-4410-a984-9946f3d5139c" />
   <Project Path="10_4AIContextProviderFactory/10_4AIContextProviderFactory.csproj" Id="c1ad3e33-dc13-4e44-990a-72d18f36825e" />
@@ -20,6 +21,7 @@
   <Project Path="10_6OpenTelemetry/10_6OpenTelemetry.csproj" Id="bc414b16-fc87-4328-aa3c-bd35642b2a27" />
   <Project Path="10_7AIAsDataFilter/10_7AIAsDataFilter.csproj" Id="63ae93ef-6fc3-4168-8148-3346de322668" />
   <Project Path="10_8ChatHistoryReduceCustom/10_8ChatHistoryReduceCustom.csproj" Id="c7481b06-d9b3-486a-82e0-29267a6d39ea" />
+  <Project Path="10_9AIContextProviders/10_9AIContextProviders.csproj" Id="73bd4cae-bb5b-411a-89da-d3b80027e19b" />
   <Project Path="MaFUtilities/MaFUtilities.csproj" Id="5f7f54d3-fcb9-4141-890b-7aa210b28ec6" />
   <Project Path="MaFWorld/02_6MaFWorld.csproj" />
 </Solution>
