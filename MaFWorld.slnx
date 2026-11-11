@@ -22,6 +22,7 @@
   <Project Path="10_7AIAsDataFilter/10_7AIAsDataFilter.csproj" Id="63ae93ef-6fc3-4168-8148-3346de322668" />
   <Project Path="10_8ChatHistoryReduceCustom/10_8ChatHistoryReduceCustom.csproj" Id="c7481b06-d9b3-486a-82e0-29267a6d39ea" />
   <Project Path="10_9AIContextProviders/10_9AIContextProviders.csproj" Id="73bd4cae-bb5b-411a-89da-d3b80027e19b" />
+  <Project Path="11_2AgentFrameworkToolkit.EasierAgents/11_2AgentFrameworkToolkit.EasierAgents.csproj" Id="9921db72-2e63-4f56-ae23-9274cc2c7154" />
   <Project Path="MaFUtilities/MaFUtilities.csproj" Id="5f7f54d3-fcb9-4141-890b-7aa210b28ec6" />
   <Project Path="MaFWorld/02_6MaFWorld.csproj" />
 </Solution>
