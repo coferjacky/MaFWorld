@@ -22,7 +22,7 @@ public class Before
         OpenAIClient client = ClientHelper.GetCustomOpenAIClient();
 
         AIAgent agent = client
-            .GetChatClient("gpt-5-mini")
+            .GetChatClient("gpt-5.4-mini")
             .AsAIAgent(
                 options: new ChatClientAgentOptions
                 {

@@ -25,7 +25,7 @@ public class After
 
         OpenAIAgent agent = agentFactory.CreateAgent(new AgentOptions
         {
-            Model = OpenAIChatModels.Gpt5Mini,
+            Model = OpenAIChatModels.Gpt54Mini,
             ReasoningEffort = OpenAIReasoningEffort.Low,
             Tools = [AIFunctionFactory.Create(WeatherTool.GetWeather)],
             RawToolCallDetails = details => { Utils.Gray(details.ToString()); }
