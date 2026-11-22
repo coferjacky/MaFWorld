@@ -1,4 +1,14 @@
 <Solution>
+  <Folder Name="/16_2AG-UI/">
+    <Project Path="AgentUserInteraction.Client/AgentUserInteraction.Client.csproj" Id="63f8bab5-478d-484e-b7d4-efe81f239944" />
+  </Folder>
+  <Folder Name="/16_5MicrosoftFoundry/">
+    <Project Path="MicrosoftFountry.Agents.Basic/MicrosoftFountry.Agents.Basic.csproj" Id="c4529972-261d-4649-9161-f12c06c61d7e" />
+  </Folder>
+  <Folder Name="/16_7A2A/">
+    <Project Path="Agent2Agent.Client/Agent2Agent.Client.csproj" Id="48c047b4-9b84-4724-83fa-7df2effc9283" />
+    <Project Path="Agent2Agent.Server/Agent2Agent.Server.csproj" Id="fdc21f3b-2ba8-45aa-990a-62ec0d5c2742" />
+  </Folder>
   <Project Path="04_3ChatLooping/04_3ChatLooping.csproj" Id="881a43b7-b2a9-4132-8291-a7b571c76d69" />
   <Project Path="05 _3ToolCallingMiddleware/05_3ToolCallingMiddleware.csproj" Id="5850977b-cdec-4152-bed5-435f3f6530b0" />
   <Project Path="05_1CreateTools/05_1CreateTools.csproj" Id="c933f0c5-345b-44ce-a4ea-6857ef75ca2d" />
@@ -26,6 +36,7 @@
   <Project Path="11_3AgentFrameworkToolkit.EasierTools/11_3AgentFrameworkToolkit.EasierTools.csproj" Id="7f5638bb-0e9f-4ed7-876c-08ac59a55d28" />
   <Project Path="13_2OpenAICachingTokens/13_2OpenAICachingTokens.csproj" Id="c144d3bf-7349-43f6-8da2-fbdd7f83ccdc" />
   <Project Path="13_4BatchJobs/13_4BatchJobs.csproj" Id="0b685bab-fbdf-4835-9110-80f22193c78a" />
+  <Project Path="DevUI/DevUI.csproj" Id="7afe7f0a-e31b-4099-90dd-de425b81f5f8" />
   <Project Path="MaFUtilities/MaFUtilities.csproj" Id="5f7f54d3-fcb9-4141-890b-7aa210b28ec6" />
   <Project Path="MaFWorld/02_6MaFWorld.csproj" />
 </Solution>

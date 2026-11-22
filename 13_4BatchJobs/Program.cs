@@ -1,4 +1,4 @@
-﻿using Microsoft.Agents.AI;
+﻿//using Microsoft.Agents.AI;
 using OpenAI;
 using OpenAI.Batch;
 using OpenAI.Files;
@@ -9,6 +9,8 @@ using System.Diagnostics;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
+
+//用中转站不行，中转站很多不支持Batch
 
 
 #pragma warning disable OPENAI001
@@ -22,13 +24,14 @@ OpenAIClient client = ClientHelper.GetCustomOpenAIClient();
 OpenAIFileClient fileClient = client.GetOpenAIFileClient();
 BatchClient batchClient = client.GetBatchClient();
 
-OpenAIFile file = await fileClient.UploadFileAsync("requestData.jsonl", new FileUploadPurpose("batch"));
+string requestDataPath = Path.Combine(AppContext.BaseDirectory, "requestData.jsonl");
+OpenAIFile file = await fileClient.UploadFileAsync(requestDataPath, new FileUploadPurpose("batch"));
 //OpenAIFile file = await fileClient.UploadFileAsync("requestData-azure.jsonl", new FileUploadPurpose("batch"));
 
 BinaryContent createBatchPayload = BinaryContent.CreateJson(new CreateBatchRequest
 {
     InputFileId = file.Id,
-    Endpoint = "/v1/chat/completions",
+    Endpoint = "/v1",
     CompletionWindow = "24h",
 });
 
