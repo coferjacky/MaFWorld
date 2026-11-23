@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/16_10ToolCalling/">
+    <Project Path="ExposeYourAgentsAsRemoteMcp/ExposeYourAgentsAsRemoteMcp.csproj" Id="ba7af1e8-b5a4-464e-8abe-a903a40a323a" />
+  </Folder>
   <Folder Name="/16_2AG-UI/">
     <Project Path="AgentUserInteraction.Client/AgentUserInteraction.Client.csproj" Id="63f8bab5-478d-484e-b7d4-efe81f239944" />
   </Folder>
