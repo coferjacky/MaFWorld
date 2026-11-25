@@ -15,6 +15,9 @@
     <Project Path="Agent2Agent.Client/Agent2Agent.Client.csproj" Id="48c047b4-9b84-4724-83fa-7df2effc9283" />
     <Project Path="Agent2Agent.Server/Agent2Agent.Server.csproj" Id="fdc21f3b-2ba8-45aa-990a-62ec0d5c2742" />
   </Folder>
+  <Folder Name="/AIContextProvider/">
+    <Project Path="16_13AIContextProvider.AgentSkills/16_13AIContextProvider.AgentSkills.csproj" Id="bcc7d82c-975d-46a3-ab85-2662c0612e5b" />
+  </Folder>
   <Project Path="04_3ChatLooping/04_3ChatLooping.csproj" Id="881a43b7-b2a9-4132-8291-a7b571c76d69" />
   <Project Path="05 _3ToolCallingMiddleware/05_3ToolCallingMiddleware.csproj" Id="5850977b-cdec-4152-bed5-435f3f6530b0" />
   <Project Path="05_1CreateTools/05_1CreateTools.csproj" Id="c933f0c5-345b-44ce-a4ea-6857ef75ca2d" />
